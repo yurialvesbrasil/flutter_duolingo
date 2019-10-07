@@ -13,9 +13,17 @@ class HomeViewModel extends BaseViewModel {
 
   List<Item> get itens => itensModel;
 
-  Future<void> setCurrentPage(double page_number) async {
-    _page = page_number.round();
-    setState(ViewState.IDLE);
+  HomeViewModel(){
+    _controller.addListener(() {
+      _page = _controller.page.round();
+      setState(ViewState.IDLE);
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   Future<void> setPage(int page_number) async {

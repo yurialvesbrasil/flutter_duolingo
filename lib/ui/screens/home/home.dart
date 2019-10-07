@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/screens/perfil/perfil.dart';
+import 'package:flutter_base/ui/values/colors.dart';
 import 'package:flutter_base/ui/values/values.dart';
 import 'package:flutter_base/ui/widgets/botton_app_bar.dart';
 import 'package:flutter_base/ui/widgets/itens_list.dart';
@@ -32,9 +33,9 @@ class _HomeViewState extends State<HomeView> {
                 decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
-                      width: 4,
+                      width: 2,
                       color: model.page != 2
-                          ? Colors.grey[200]
+                          ? dividerColor
                           : Colors.transparent,
                     ),
                   ),

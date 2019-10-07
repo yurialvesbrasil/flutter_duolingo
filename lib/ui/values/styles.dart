@@ -18,7 +18,7 @@ class AppTheme {
   static const TextStyle pedra = TextStyle(
     fontFamily: 'WorkSans',
     color: Color(0xFFff3333),
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: FontWeight.w600,
     letterSpacing: 1.2,
   );
@@ -26,7 +26,7 @@ class AppTheme {
   static const TextStyle foguinho = TextStyle(
     fontFamily: 'WorkSans',
     color: Color(0xFFff9900),
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: FontWeight.w600,
     letterSpacing: 1.2,
   );
@@ -34,7 +34,7 @@ class AppTheme {
   static const TextStyle coroa = TextStyle(
     fontFamily: 'WorkSans',
     color: Color(0xFFffcc00),
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: FontWeight.w600,
     letterSpacing: 1.2,
   );
@@ -57,10 +57,9 @@ class AppTheme {
 
   static final TextStyle heading = TextStyle(
     fontFamily: 'WorkSans',
-    fontWeight: FontWeight.w800,
-    fontSize: 22,
-    color: Colors.grey[350],
-    letterSpacing: 1.2,
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+    color: Colors.grey[500],
   );
 
   static final TextStyle subHeading = TextStyle(

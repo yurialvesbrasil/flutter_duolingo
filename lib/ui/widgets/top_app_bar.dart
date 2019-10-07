@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/values/styles.dart';
+import 'package:flutter_base/ui/values/values.dart';
 import 'package:provider/provider.dart';
 
 class buildAppBar extends StatelessWidget implements PreferredSize {
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<HomeViewModel>(context);
-
-    model.controller.addListener(() {
-      model.setCurrentPage(model.controller.page);
-    });
 
     switch (model.page) {
       case 0:
@@ -84,7 +81,7 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 8, left: 60),
+                  padding: EdgeInsets.only(top: 6, left: 62),
                   child: Text(
                     'Perfil',
                     style: AppTheme.heading,
@@ -93,13 +90,13 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
               ],
             ))),
             Padding(
-              padding: const EdgeInsets.only(right: 16, top: 2),
+              padding: const EdgeInsets.only(right: 8, top: 2),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Image.asset(
                       'assets/icons/conf.png',
-                      height: 48,
+                      height: 44,
                     ),
                   ]),
             ),
@@ -124,7 +121,7 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 8, left: 25),
+                  padding: EdgeInsets.only(top: 8, left: 60),
                   child: Text(
                     'Loja',
                     style: AppTheme.heading,
@@ -158,5 +155,5 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(CUSTOM_APP_BAR_HEIGHT);
 }

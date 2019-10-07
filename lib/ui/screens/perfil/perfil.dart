@@ -9,9 +9,9 @@ class PerfilView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(18),
+              padding: EdgeInsets.all(16),
               child: CircleAvatar(
-                radius: 55,
+                radius: 46,
                 backgroundImage: AssetImage(
                   "assets/images/eu.jpg",
                 ),
@@ -23,9 +23,9 @@ class PerfilView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.fromLTRB(90, 90, 0, 0),
+              padding: EdgeInsets.fromLTRB(70, 82, 0, 0),
               child: CircleAvatar(
-                radius: 18,
+                radius: 12,
                 backgroundColor: Colors.white,
                 backgroundImage: AssetImage(
                   "assets/icons/edit_icon.png",

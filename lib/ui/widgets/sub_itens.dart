@@ -27,10 +27,10 @@ class SubItemList extends StatelessWidget {
                     center: Column(
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.fromLTRB(8, 13, 7, 7),
+                          padding: EdgeInsets.fromLTRB(8, 14, 7, 7),
                           child: Image.asset(
                             subitens[index].url_icone,
-                            height: MediaQuery.of(context).size.height / 7,
+                            height: MediaQuery.of(context).size.width / 4,
                           ),
                         ),
                       ],

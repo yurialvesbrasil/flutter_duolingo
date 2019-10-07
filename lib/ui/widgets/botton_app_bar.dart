@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
+import 'package:flutter_base/ui/values/colors.dart';
 import 'package:flutter_base/ui/values/values.dart';
 import 'package:provider/provider.dart';
 
@@ -15,8 +16,8 @@ class CustomBottonAppBar extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(
             top: BorderSide(
-              width: 4,
-              color: Colors.grey[200],
+              width: CUSTOM_DIVIDER_HEIGHT,
+              color: dividerColor,
             ),
           ),
         ),

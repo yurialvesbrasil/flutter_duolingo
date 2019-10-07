@@ -6,3 +6,4 @@ const Color primaryColor = Colors.white;
 const Color canvasColor = Colors.white;
 const Color appBarThemeColor = Colors.white;
 const Color progressColorF1 = Color(0xFFff3333);
+Color dividerColor = Colors.grey[300];
