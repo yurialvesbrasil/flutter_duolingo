@@ -1,6 +1,7 @@
-# flutter_base
+# flutter_duolingo
 
-A new Flutter project.
+Flutter UI, Interface do Duoling em Flutter
+
 
 ## Getting Started
 
