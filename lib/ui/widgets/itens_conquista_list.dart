@@ -12,34 +12,37 @@ class ItensConquistaList extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: 8),
       child: Container(
-        child: Stack(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
-              child: Image.asset(
-                _itensConquista[index].url_imagem,
-                height: 120,
-              ),
+          child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
+            child: Image.asset(
+              _itensConquista[index].url_imagem,
+              height: 120,
             ),
-            Positioned(
-              left: 128,
-              child: Text(
-                _itensConquista[index].titulo,
-                style: AppTheme.subHeading,
-              ),
+          ),
+          SizedBox(width: 8.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  _itensConquista[index].titulo,
+                  style: AppTheme.subHeading,
+                ),
+                SizedBox(height: 12.0),
+                Text(
+                  _itensConquista[index].texto,
+                  style: AppTheme.text,
+                  softWrap: true,
+                ),
+              ],
             ),
-            Positioned(
-              left: 128,
-              top: 30,
-              child: Text(
-                _itensConquista[index].texto,
-                style: AppTheme.text,
-                softWrap: true,
-              ),
-            )
-          ],
-        ),
-      ),
+          )
+        ],
+      )),
     );
   }
 

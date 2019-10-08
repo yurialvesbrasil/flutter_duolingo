@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 08 15:56:11 GFT 2019
+#Tue Oct 08 16:21:27 GFT 2019
 5.base=C\:\\Users\\yurip\\Desktop\\Cursos\\Udemy - Flutter\\ProjetosGIT\\flutter_duolingo\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 22.path=flutter_assets/assets/icons/casa_cinza.png
 32.set=ASSET

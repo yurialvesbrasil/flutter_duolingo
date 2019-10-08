@@ -1,4 +1,4 @@
-#Tue Oct 08 15:56:06 GFT 2019
+#Tue Oct 08 16:21:23 GFT 2019
 base.0=C\:\\Users\\yurip\\Desktop\\Cursos\\Udemy - Flutter\\ProjetosGIT\\flutter_duolingo\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
