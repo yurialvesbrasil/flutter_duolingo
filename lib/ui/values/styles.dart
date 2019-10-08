@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  static const TextStyle tabTitleEnable = TextStyle(
+    fontFamily: 'WorkSans',
+    color: Color(0xFF3399ff),
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle tabTitleDisable = TextStyle(
+    fontFamily: 'WorkSans',
+    color: Color(0xFF999999),
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
+
   static const TextStyle fase1 = TextStyle(
     fontFamily: 'WorkSans',
     color: Color(0xFFcc6600),
@@ -64,8 +78,15 @@ class AppTheme {
 
   static final TextStyle subHeading = TextStyle(
     fontFamily: 'WorkSans',
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w700,
+    fontSize: 18,
+    color: Colors.grey[700],
+  );
+
+  static final TextStyle text = TextStyle(
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w700,
     fontSize: 16,
-    color: Colors.black,
+    color: Colors.grey[500],
   );
 }

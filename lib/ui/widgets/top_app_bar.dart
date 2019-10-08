@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/values/styles.dart';
 import 'package:flutter_base/ui/values/values.dart';
+import 'package:flutter_base/ui/widgets/perfil_top_app_bar.dart';
 import 'package:provider/provider.dart';
 
 class buildAppBar extends StatelessWidget implements PreferredSize {
@@ -72,36 +73,7 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
           ],
         );
       case 1:
-        return AppBar(
-          elevation: 0,
-          actions: <Widget>[
-            Expanded(
-                child: Container(
-                    child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(top: 6, left: 62),
-                  child: Text(
-                    'Perfil',
-                    style: AppTheme.heading,
-                  ),
-                ),
-              ],
-            ))),
-            Padding(
-              padding: const EdgeInsets.only(right: 8, top: 2),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Image.asset(
-                      'assets/icons/conf.png',
-                      height: 44,
-                    ),
-                  ]),
-            ),
-          ],
-        );
+        return PrefilTopAppBar(model);
       case 2:
         return AppBar(
           elevation: 0,

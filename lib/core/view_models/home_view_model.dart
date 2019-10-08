@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/enums/view_state.dart';
 import 'package:flutter_base/core/models/item.dart';
+import 'package:flutter_base/core/models/item_conquista.dart';
 
 import 'base_view_model.dart';
 
@@ -11,7 +12,11 @@ class HomeViewModel extends BaseViewModel {
   int _page = 0;
   int get page => _page;
 
+  int _tabPage = 0;
+  int get tabPage => _tabPage;
+
   List<Item> get itens => itensModel;
+  List<ItemConquista> get itensConq => itensConquista;
 
   HomeViewModel() {
     _controller.addListener(() {
@@ -36,5 +41,10 @@ class HomeViewModel extends BaseViewModel {
   Future<void> setPage(int page_number) async {
     await _controller.animateToPage(page_number,
         duration: Duration(milliseconds: 200), curve: Curves.ease);
+  }
+
+  void setTabPage(int tabNumber) {
+    _tabPage = tabNumber;
+    setState(ViewState.IDLE);
   }
 }
