@@ -13,9 +13,16 @@ class HomeViewModel extends BaseViewModel {
 
   List<Item> get itens => itensModel;
 
-  HomeViewModel(){
+  HomeViewModel() {
     _controller.addListener(() {
-      _page = _controller.page.round();
+      if (_controller.page == 0.0)
+        _page = 0;
+      else if (_controller.page == 1.0)
+        _page = 1;
+      else if (_controller.page == 2.0)
+        _page = 2;
+      else if (_controller.page == 3.0) _page = 3;
+
       setState(ViewState.IDLE);
     });
   }
@@ -27,9 +34,7 @@ class HomeViewModel extends BaseViewModel {
   }
 
   Future<void> setPage(int page_number) async {
-    _page = page_number;
-    _controller.animateToPage(page_number,
+    await _controller.animateToPage(page_number,
         duration: Duration(milliseconds: 200), curve: Curves.ease);
-    setState(ViewState.IDLE);
   }
 }
