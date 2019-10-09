@@ -1,17 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/ui/values/colors.dart';
 
 class AppTheme {
   static const TextStyle tabTitleEnable = TextStyle(
     fontFamily: 'WorkSans',
-    color: Color(0xFF3399ff),
+    color: Color(0xFF1cb0f6),
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
 
+  static const TextStyle adicionar = TextStyle(
+    fontFamily: 'WorkSans',
+    color: Color(0xFF1cb0f6),
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 1.2,
+  );
+
   static const TextStyle tabTitleDisable = TextStyle(
     fontFamily: 'WorkSans',
-    color: Color(0xFF999999),
+    color: Color(0xFFBDBDBD),
     fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle percentual = TextStyle(
+    fontFamily: 'WorkSans',
+    color: Color(0xFF999999),
+    fontSize: 20,
     fontWeight: FontWeight.w600,
   );
 
@@ -24,9 +40,31 @@ class AppTheme {
 
   static const TextStyle item = TextStyle(
     fontFamily: 'WorkSans',
-    color: Color(0xFF000000),
+    color: fonteListColor,
     fontSize: 18,
     fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle TotalXpItem = TextStyle(
+    fontFamily: 'WorkSans',
+    color: fonteListColor,
+    fontSize: 24,
+    fontWeight: FontWeight.w900,
+    letterSpacing: 1.2,
+  );
+
+  static const TextStyle nomeAmigo = TextStyle(
+    fontFamily: 'WorkSans',
+    color: fonteListColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const TextStyle itemXp = TextStyle(
+    fontFamily: 'WorkSans',
+    color: fonteListColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w200,
   );
 
   static const TextStyle pedra = TextStyle(
@@ -85,8 +123,8 @@ class AppTheme {
 
   static final TextStyle text = TextStyle(
     fontFamily: 'WorkSans',
-    fontWeight: FontWeight.w700,
-    fontSize: 16,
-    color: Colors.grey[500],
+    fontWeight: FontWeight.w500,
+    fontSize: 18,
+    color: Color(0xFF777775),
   );
 }

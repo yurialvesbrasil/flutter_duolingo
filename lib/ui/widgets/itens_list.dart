@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/models/item.dart';
+import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/widgets/sub_itens.dart';
+import 'package:provider/provider.dart';
 
 class ItensList extends StatelessWidget {
   final List<Item> itens;
@@ -25,10 +27,29 @@ class ItensList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("numeor de itens: " + itens.length.toString());
-    return ListView.builder(
-      itemBuilder: _buildItem,
-      itemCount: itens.length,
+    final model = Provider.of<HomeViewModel>(context);
+
+    return Stack(
+      children: <Widget>[
+        ListView.builder(
+          itemBuilder: _buildItem,
+          itemCount: itens.length,
+        ),
+        Positioned(
+            bottom: 12,
+            right: 12,
+            child: GestureDetector(
+              // When the user taps the button, show a snackbar.
+              onTapDown: (i) => model.setClickDown(),
+              onTapUp: (i) => model.setClickUp(),
+              child: Image.asset(
+                model.clickDown
+                    ? model.url_float_button_click
+                    : model.url_float_button,
+                height: 75,
+              ),
+            )),
+      ],
     );
   }
 }

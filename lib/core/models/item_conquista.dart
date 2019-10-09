@@ -1,8 +1,8 @@
 class ItemConquista {
   String titulo;
   String texto;
-  int progress_atual;
-  int progress_total;
+  double progress_atual;
+  double progress_total;
   String url_imagem;
 
   ItemConquista(
@@ -23,7 +23,7 @@ var itensConquista = [
   ItemConquista(
       titulo: "Campeão",
       texto: "Você ganhou isto por concluir um curso",
-      progress_atual: 3,
-      progress_total: 30,
+      progress_atual: 0,
+      progress_total: 0,
       url_imagem: "assets/icons/item_conquista_2.png")
 ];

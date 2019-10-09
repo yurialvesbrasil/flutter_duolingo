@@ -5,6 +5,7 @@ import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/values/styles.dart';
 import 'package:flutter_base/ui/values/values.dart';
 import 'package:flutter_base/ui/widgets/divider.dart';
+import 'package:flutter_base/ui/widgets/itens_amigos_list.dart';
 import 'package:flutter_base/ui/widgets/itens_conquista_list.dart';
 import 'package:provider/provider.dart';
 
@@ -79,40 +80,89 @@ class _PerfilViewState extends State<PerfilView>
           "Yuri Brasil",
           style: AppTheme.subHeading,
         ),
+        SizedBox(
+          height: 8,
+        ),
         Container(
-          padding: EdgeInsets.only(top: 20),
           width: MediaQuery.of(context).size.width,
           height: CUSTOM_TAB_BAR_HEIGHT,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Text(
-                    "CONQUISTAS",
-                    style: AppTheme.tabTitleEnable,
-                  ),
-                  TabDivider(true),
-                ],
+              InkWell(
+                onTap: () => model.setSubTabPage(0),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 12),
+                        child: Text(
+                          "CONQUISTAS",
+                          style: (model.subTabPage == 0)
+                              ? AppTheme.tabTitleEnable
+                              : AppTheme.tabTitleDisable,
+                        ),
+                      ),
+                    ),
+                    TabDivider(model.subTabPage == 0),
+                  ],
+                ),
               ),
-              Column(
-                children: <Widget>[
-                  Text(
-                    "AMIGOS",
-                    style: AppTheme.tabTitleDisable,
-                  ),
-                  TabDivider(false),
-                ],
-              )
+              InkWell(
+                onTap: () => model.setSubTabPage(1),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 12),
+                        child: Text(
+                          "AMIGOS",
+                          style: (model.subTabPage == 1)
+                              ? AppTheme.tabTitleEnable
+                              : AppTheme.tabTitleDisable,
+                        ),
+                      ),
+                    ),
+                    TabDivider(model.subTabPage == 1),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 295,
-          padding: EdgeInsets.all(8),
-          child: ItensConquistaList(_itensConquista),
-        ),
+        (model.subTabPage == 0)
+            ? Container(
+                width: MediaQuery.of(context).size.width,
+                height: 290,
+                padding: EdgeInsets.all(8),
+                child: ItensConquistaList(_itensConquista),
+              )
+            : Container(
+                child: Column(
+
+                children: <Widget>[
+                  SizedBox(height: 12,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        "Total de XP",
+                        style: AppTheme.TotalXpItem,
+                      ),
+                      Text(
+                        "ADICIONAR",
+                        style: AppTheme.adicionar,
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 250,
+                    padding: EdgeInsets.all(8),
+                    child: ItensAmigosList(model.itemAmigoVM),
+                  ),
+                ],
+              )),
       ],
     );
   }
