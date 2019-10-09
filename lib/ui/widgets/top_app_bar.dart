@@ -93,7 +93,7 @@ class buildAppBar extends StatelessWidget implements PreferredSize {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 8, left: 60),
+                  padding: EdgeInsets.only(top: 6, left: 62),
                   child: Text(
                     'Loja',
                     style: AppTheme.heading,

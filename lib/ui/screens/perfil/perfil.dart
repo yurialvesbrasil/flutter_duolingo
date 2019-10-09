@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/models/item_conquista.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
@@ -104,7 +104,7 @@ class _PerfilViewState extends State<PerfilView>
                         ),
                       ),
                     ),
-                    TabDivider(model.subTabPage == 0),
+                    TabDivider(model.subTabPage == 0, MediaQuery.of(context).size.width/2),
                   ],
                 ),
               ),
@@ -123,7 +123,7 @@ class _PerfilViewState extends State<PerfilView>
                         ),
                       ),
                     ),
-                    TabDivider(model.subTabPage == 1),
+                    TabDivider(model.subTabPage == 1, MediaQuery.of(context).size.width/2),
                   ],
                 ),
               ),

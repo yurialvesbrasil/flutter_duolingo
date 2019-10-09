@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base/core/view_models/home_view_model.dart';
 import 'package:flutter_base/ui/widgets/botton_app_bar.dart';
 import 'package:flutter_base/ui/widgets/top_app_bar.dart';
+import 'package:provider/provider.dart';
 
 import 'home_body.dart';
 
@@ -13,6 +15,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
+    final model = Provider.of<HomeViewModel>(context);
     final appBar = buildAppBar();
     return Scaffold(
         appBar: appBar,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/view_models/home_view_model.dart';
+import 'package:flutter_base/ui/screens/classificacao/classificacao.dart';
 import 'package:flutter_base/ui/screens/perfil/perfil.dart';
 import 'package:flutter_base/ui/values/colors.dart';
 import 'package:flutter_base/ui/values/values.dart';
@@ -35,7 +36,7 @@ class HomeBodyView extends StatelessWidget {
         //Pagina 2
         PerfilView(),
         //Pagina 3
-        Container(),
+        ClassificacaoView(),
         //Pagina 4
         Container(),
       ]),

@@ -121,6 +121,20 @@ class AppTheme {
     color: Colors.grey[700],
   );
 
+  static final TextStyle subHeadingDivi = TextStyle(
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w500,
+    fontSize: 18,
+    color: Color(0xFF777775),
+  );
+
+  static final TextStyle subSubHeadingDivi = TextStyle(
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w800,
+    fontSize: 22,
+    color: Color(0xFFffcc00),
+  );
+
   static final TextStyle text = TextStyle(
     fontFamily: 'WorkSans',
     fontWeight: FontWeight.w500,

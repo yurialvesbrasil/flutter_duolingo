@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\yurip\\Desktop\\Cursos\\Udemy - Flutter\\ProjetosGIT\\flutter_duolingo\\build\\app\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
+            "outputFile": "E:\\ProjetosFlutter\\GitHub\\flutter_duolingo\\build\\app\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\yurip\\Desktop\\Cursos\\Udemy - Flutter\\ProjetosGIT\\flutter_duolingo\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\ProjetosFlutter\\GitHub\\flutter_duolingo\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\yurip\\Desktop\\Cursos\\Udemy - Flutter\\ProjetosGIT\\flutter_duolingo\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "E:\\ProjetosFlutter\\GitHub\\flutter_duolingo\\android\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
